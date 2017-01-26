@@ -12,7 +12,7 @@ body { background-color: transparent; font-family: 'avenir-next'; }
 .nav .right a:hover { color: #269cdb; }
 .nav .right a:hover .color { background-color: #ffffff; color: #0d9a69; }
 .nav .right > .button { display: none; }
-.nav .wrapper-inner { height: 100%; }
+.nav .wrapper-inner { height: 100%; max-width: 1280px; }
 .nav .wrapper-outer { height: 100%; background-color: #FFF;  }
 
 .wrapper-outer { max-width: 1400px; margin: 0px auto; }
@@ -69,7 +69,7 @@ body { background-color: transparent; font-family: 'avenir-next'; }
 }
 #section4 button {
     width: 100%;
-    background-color: #05518d;
+    background-color: #0d9a69;
     border: none;
     color: #ffffff;
     padding: 24px;

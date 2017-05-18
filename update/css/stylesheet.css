@@ -1,6 +1,6 @@
 
 html { background-color: #cccccc; }
-body { background-color: transparent; font-family: 'avenir-next'; }
+body { background-color: transparent; font-family: 'roboto-condensedlight'; }
 
 
 .nav { display: block; height: 124px; position: fixed; z-index: 1000; width: 100%; top:0; left:0; right:0; }
@@ -26,15 +26,18 @@ body { background-color: transparent; font-family: 'avenir-next'; }
 .wrapper-outer { max-width: 1400px; margin: 0px auto; }
 .wrapper-inner { max-width: 1280px; margin: 0px auto; padding: 0px 12px; }
 
-.header { width: 100%; height: 720px; color: #FFF; position: relative; overflow: hidden; }
+.header { width: 100%; height: 900px; color: #FFF; position: relative; overflow: hidden; }
 .header > img { width: 100%; height: auto; min-height: 640px; min-width: 1280px; right: 0px; position: absolute; bottom: 0px; }
-.header .article { position: absolute; z-index: 1; width: 100%; height: 100%; top:0; }
-.header .head-line { margin-top: 210px; }
-.header .head-line h1 { text-transform: uppercase; margin: 0px; padding: 0px; font-family: 'gotham-ultra'; font-size: 80px; line-height: 64px; text-shadow: 0px 0px 20px rgba(0,0,0,0.75); }
-.header .head-line h2 { text-transform: uppercase; margin: 0px; padding: 0px; font-family: 'avenir-next'; font-size: 30px; line-height: 36px; text-shadow: 0px 0px 10px rgba(0,0,0,0.75); }
+.header .article { display: -webkit-box; display: -moz-box; display: -webkit-flex; display: flex; -webkit-box-flex-direction: row; -moz-box-flex-direction: row; -webkit-flex-direction: row; flex-direction: row; position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; }
+.header .head-line { margin: auto; text-align: center; padding: 24px 16px 0; }
+.header .head-line img { max-width: 100%; }
+.header .head-line h1 { margin: 12px 0; padding: 0px; font-family: 'GothamHTF-BookCondensed'; font-size: 38px; line-height: 32px; }
+.header .head-line p { margin: 12px 0; padding: 0px; font-family: 'roboto-condensedlight'; font-size: 15px; line-height: 12px; text-align: right; }
 .header .footer { position: absolute; bottom: 0px; right: 120px; }
 .header .footer span { color: #FFF; display: block; padding: 12px 0px; text-shadow: 0px 0px 5px #000; }
 .header .footer .logo { }
+.header .learn-more { bottom: 12px; color: #fff; font-family: 'GothamHTF-BookCondensed'; font-size: 17px; left: 0; position: absolute; right: 0; text-align: center; text-decoration: none; text-transform: uppercase; }
+.header .learn-more:after { content: '\2193'; display: block; font-size: 16px; line-height: 16px; }
 
 .owl-carousel { height: inherit; }
 .owl-carousel .owl-stage-outer { height: inherit; }
@@ -44,11 +47,12 @@ body { background-color: transparent; font-family: 'avenir-next'; }
 
 .section {
     background-color: #FFF;
-    padding: 128px 0px;
+    padding: 80px 0px;
     width: 100%;
 }
-.section h1 { font-family: 'avenir-next'; font-size: 32px; margin-bottom: 42px; color: #666; }
-.section p, .section ul { font-family: 'avenir-next-reg'; color: #777; font-size: 17px; margin: 24px 0px; }
+.section h1 { font-family: 'roboto-condensedbold'; font-size: 36px; margin-bottom: 24px; color: #666; }
+.section h3 { font-family: 'roboto-condensedbold'; font-size: 30px; margin-bottom: 24px; color: #666; }
+.section p, .section ul { font-family: 'roboto-condensedlight'; color: #777; font-size: 17px; margin: 24px 0px; }
 .section ul { padding-left: 0px; margin-left: 20px; margin: 0px 0px 0px 20px; }
 .section .left { width: 50%; display: inline-block; padding-right: 12px; margin-right: -4px; }
 .section .left.relative { position: relative; }
@@ -63,6 +67,17 @@ body { background-color: transparent; font-family: 'avenir-next'; }
 .section .tg .tg-s6z2{text-align:center; color:#666; border: 2px solid #e5e5e5;}
 .section .tg .tg-s6z2.no-border {  border: 2px solid #FFF;}
 .section .tg .tg-1c9a{background-color:#05518d;color:#ffffff;text-align:center;  border: 2px solid #e5e5e5;}
+
+.background-image {
+    background: url('') no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.center-image { display: block; margin-left: auto; margin-right: auto; }
 
 #section0 { background-color: #f5f5f5; padding-top: 48px; padding-bottom: 0; box-shadow: inset 0 -80px 80px -80px rgba(0,0,0,0.15); }
 #section0 .wrapper-inner { margin-bottom: -5px; }
@@ -99,7 +114,7 @@ body { background-color: transparent; font-family: 'avenir-next'; }
 }
 .pad-left-110 { padding-left: 110px; }
 
-.section .wrapper-inner.smaller { max-width: 800px; }
+.section .wrapper-inner.smaller { max-width: 920px; }
 .section .animation { position: relative; max-width: 800px; margin-top: -16px; min-height: 420px; }
 .section .animation img { position: absolute; top: 0%; left: 0; width: auto; }
 
@@ -157,31 +172,27 @@ body { background-color: transparent; font-family: 'avenir-next'; }
 }
 @media(max-width:960px){
     .nav { height: 80px; }
-    .nav .left { height: 64px; }
-	.nav .left img { margin-top: 2px; height: 120%; }
+    .nav .left { height: 64px; margin-top: 14px; }
+	.nav .left img { margin-top: 2px; max-height: 80%; max-width: 100%; height: auto; }
     .nav .right a { font-size: 14px; line-height: 80px; }
-    .header .head-line h1 { font-size: 64px; line-height: 62px; }
-    .header .head-line h2 { font-size: 24px; line-height: 32px; }
+    .header .head-line h1 { font-size: 24px; }
+    .header .head-line p { text-align: center; }
 }
 @media(max-width:800px){
-    .nav .left { height: 48px; margin: 8px 0px; }
+    .nav .right { background-color: #FFF; height: auto; }
+    .nav .right > a { display: none; text-align: center; padding: 0px 12px; width: 100%; }
+    .nav .right > a.banner { margin: 0; }
+    .nav:hover .right > img { margin-top: -40px; }
+	.header .footer { right: 12px; }
+    .header .footer .logo { max-width: 50%; height: auto;  }
     .section.animate-images .right { width: 100%; }
     .pad-left-110 { padding-left: 0px; }
 }
 @media(max-width:640px){
-    .nav .right { background-color: #FFF; height: auto; }
-    .nav .right .button { display: block; margin: 24px 24px 24px auto; right: 0px; }
-    .nav .right > a { display: none; text-align: center; padding: 0px 12px; width: 100%; }
-    .nav:hover .right {  width: 100%; }
-    .nav:hover .right > img { margin-top: -40px; }
-    .nav:hover .right > a { display: block; border-top: 1px solid #f5f5f5; }
-    .header .head-line h1 { font-size: 36px; line-height: 32px; }
-    .header .head-line h2 { font-size: 24px; line-height: 26px; }
-	.header .footer { right: 12px; }
-    .header .footer .logo { max-width: 50%; height: auto;  }
-    
+    .nav .right  { transform:scale(0.7); top: -30%; position: absolute; right: 0; }
     .section { padding: 32px 0px; }
     .section .left { width: 100%; display: block; padding: 0px; }
+    .section .left img { margin-top: 12px; max-height: 50%; }
     .section .right { width: 100%; display: block; padding: 0px; }
 	.section .tg td{ font-size:14px; }
 	.section .tg th{ font-size:14px; }
@@ -216,6 +227,26 @@ body { background-color: transparent; font-family: 'avenir-next'; }
        url('../fonts/AvenirNext-Regular.svg#ubunturegular') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+    font-family: 'GothamHTF-BookCondensed';
+    src: url('../fonts/GothamHTF-BookCondensed.eot');
+    src: url('../fonts/GothamHTF-BookCondensed.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GothamHTF-BookCondensed.woff') format('woff'),
+         url('../fonts/GothamHTF-BookCondensed.ttf') format('truetype'),
+         url('../fonts/GothamHTF-BookCondensed.svg#ubunturegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GothamHTF-Medium';
+    src: url('../fonts/GothamHTF-Medium.eot');
+    src: url('../fonts/GothamHTF-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GothamHTF-Medium.woff') format('woff'),
+         url('../fonts/GothamHTF-Medium.ttf') format('truetype'),
+         url('../fonts/GothamHTF-Medium.svg#ubunturegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
     font-family: 'gotham-ultra';

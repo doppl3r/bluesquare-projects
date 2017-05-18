@@ -38,13 +38,18 @@
 			</div>
 
 			<div class="wrapper-outer">
-				<div class="section">
+				<div class="section" id="section1" data-menu-offset="-64">
 					<div class="wrapper-inner smaller">
 						<div style="font-family: 'roboto-condensedlight'; font-size: 16px; color: #243f84; text-align: center;">BECAUSE YOU ARE A VALUED CUSTOMER OF</div>
 						<img class="center-image" src="img/presidential-pools-logo.png">
 						<h1 class="center">Presidential Pools has negotiated an incredible factory-direct offer to improve your in-floor pool cleaner at a fraction of the normal cost.</h1>
 						<div class="left">
-							
+							<div class="owl-carousel parts">
+								<div class="item"><img src="img/pool-part-1.png"/></div>
+								<div class="item"><img src="img/pool-part-2.png"/></div>
+								<div class="item"><img src="img/pool-part-3.png"/></div>
+								<div class="item"><img src="img/pool-part-4.png"/></div>
+							</div>
 						</div>
 						<div class="right">
 							<h3>New in-floor jets by Blue Square clean further and are more reliable than ever before</h3>
@@ -62,51 +67,37 @@
 			</div>
 
 			<div class="wrapper-outer">
-				<div class="section" id="section0" data-menu-offset="-64">
-					<div class="wrapper-inner">
-						<h1 class="center" style="margin-bottom: 0;">Naughty Nich? No problem.</h1>
-						<!--<p class="center pad-bottom-32" style="margin-top: 12px;">Spectrum 360 is the advanced pool lighting solution engineered with pool builders in mind. With Spectrum 360 installing pool lighting is easier, quicker and more cost effective than ever before. Best of all - pool owners love it too.</p>-->
-						<p class="center" style="max-width: 800px; margin: 12px auto 48px;">One of the biggest reasons builders prefer installing Spectrum 360 is the flixibility of positioning the lighting nich. With Spectrum 360 if the nich is a little too deep, or angled too high or angled too low - it’s no problem. Spectrum 360 still installs with ease.</p>
-						<div class="left">
-							<div class="owl-carousel zero">
-								<div class="item"><img src="img/1-ideal.png"/></div>
-								<div class="item"><img src="img/2-deep.png"/></div>
-								<div class="item"><img src="img/3-dipping.png"/></div>
-								<div class="item"><img src="img/4-rising.png"/></div>
-							</div>
-						</div>
-						<div class="right">
-							<ul>
-								<li><span class="step">1</span>Typical Alignment</li>
-								<li><span class="step">2</span>Nich too deep? No problem</li>
-								<li><span class="step">3</span>Nich angled too low? Easy fix</li>
-								<li><span class="step">4</span>Nich angled too high? Still flush</li>
-							</ul>
-						</div>
+				<div class="section" data-menu-offset="-64" style="background-color: #e5f7fd;">
+					<div class="wrapper-inner" style="text-align: center;">
+						<h1 style="color: #1e406d; font-family: 'roboto-condensedbold'; font-size: 53px; margin: 0;">Easily Replaces Your Current In-Floor Jets</h1>
+						<h3 style="color: #1e406d; font-family: 'roboto-condensedregular'; font-size: 26px; font-style: italic; margin: 0 0 24px;">and improves cleaning performance at a fraction of the cost</h3>
+						<img src="img/parts-artwork.png" style="max-width: 100%;"/>
 					</div>
 				</div>
 			</div>
 			
 			<div class="wrapper-outer">
-				<div class="section" id="section1" data-menu-offset="-64">
+				<div class="section" data-menu-offset="-64">
 					<div class="wrapper-inner">
 						<div class="left">
-							<img src="img/pool-light.jpg"/>
+							<img class="center-image" src="img/free-water-valve-update.png"/>
+							<p style="font-family: 'avenir-next-reg'; font-size: 20px; text-align: center;">The Water Valve is the heart of any cleaning system, having the most efficent water valve on the market saves energy and money. Independently certified for most gallons per KW hour.</p>
 						</div>
 						<div class="right">
-							<h1>Combines many unique features resulting in a spectacular, ultra reliable lightning system that's user friendly & easy to install</h1>
-							<p>Spectrum 360 LED lights are available in either fixed color or multi-color options. The fixed colors are white and blue – the multi-color options which provides an almost limitless variety of color possibilities and a vast array of preprogrammed scroll and flash modes.</p>
-							<img src="img/3colorlights.jpg"/>
+							<img src="img/free-parts-haha.png"/>
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="wrapper-outer">
-				<div class="section" id="section2" style="background-image: url('img/bg2.jpg')">
+				<div class="section background-image" style="background-image: url('img/blue-pool-dark.jpg'); position: relative; padding: 112px 0;">
 					<div class="wrapper-inner">
-						<h1>at night your pool comes alive</h1>
+						<div class="left">
+							<img class="center-image" src="img/free-installation-text.png"/>
+						</div>
 					</div>
+					<img src="img/guy.png" class="guy"/>
 				</div>
 			</div>
 			
@@ -231,6 +222,7 @@
 			}
 			$( document ).ready(function() {
 				$('#header').load('header-2.html');
+				$('.owl-carousel.parts').owlCarousel({ loop:true, nav:true, navText:["",""], items:1, margin:0, autoplay:true, autoplayTimeout: 2000, pagination: true  });
 				$('.owl-carousel.zero').owlCarousel({ loop:true, nav:true, navText:["",""], items:1, margin:0, autoplay:true, autoplayTimeout: 2000, animateOut: 'fadeOut', touchDrag: false, mouseDrag: false  });
 			});
 

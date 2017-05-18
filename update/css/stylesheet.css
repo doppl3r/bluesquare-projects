@@ -65,8 +65,8 @@ body { background-color: transparent; font-family: 'roboto-condensedlight'; }
 .section .tm { font-size: .45em; vertical-align:top; text-transform: uppercase; margin-top: -10px; }
 
 .section .tg  { border-collapse:collapse; border-spacing:0; width: 100%; margin-top: 48px; border: 2px solid #efefef; }
-.section .tg td{ font-size:18px; padding:24px 5px; border: 2px solid #FFF; overflow:hidden; word-break:normal; }
-.section .tg th{ font-size:18px; font-weight:normal; padding:24px 5px; border: 2px solid #FFF; overflow:hidden; word-break:normal;}
+.section .tg td{ font-size:26px; padding:24px 5px; border: 2px solid #FFF; overflow:hidden; word-break:normal; }
+.section .tg th{ font-size:26px; font-weight:normal; padding:24px 5px; border: 2px solid #FFF; overflow:hidden; word-break:normal;}
 .section .tg .tg-s6z2{text-align:center; color:#666; border: 2px solid #e5e5e5;}
 .section .tg .tg-s6z2.no-border {  border: 2px solid #FFF;}
 .section .tg .tg-1c9a{background-color:#05518d;color:#ffffff;text-align:center;  border: 2px solid #e5e5e5;}
@@ -142,6 +142,8 @@ body { background-color: transparent; font-family: 'roboto-condensedlight'; }
     .header .head-line h1 { font-size: 24px; }
     .header .head-line p { text-align: center; }
     .guy { max-width: 50% !important; z-index: 0;}
+    .section .tg td{ font-size: 18px; }
+    .section .tg th{ font-size: 18px; }
 }
 @media(max-width:800px){
     .nav .right { background-color: #FFF; height: auto; }

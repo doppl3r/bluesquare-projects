@@ -139,6 +139,19 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="wrapper-outer">
+				<div class="section background-image" id="section2" data-menu-offset="-64" style="background-image: url('img/bg1-0.jpg');">
+					<div class="wrapper-inner">
+						<img class="center-image" src="img/save-50-percent-text.png"/>
+						<a class="green-button" id="cta">
+							<div class="large-text">order now</div>
+							<div class="small-text">limited time offer</div>
+						</a>
+						<h1 style="font-family:'roboto-condensedbold'; font-size: 45px; text-align: center; color: #fff;">or Call 1.800.277.4150</h1>
+					</div>
+				</div>
+			</div>
 			
 			<div class="wrapper-outer">
 				<div class="footer section">
@@ -149,7 +162,7 @@
 						<a href="#">privacy policy</a>
 						<a href="#">terms of use</a>
 						<a href="#">copyright</a><br>
-						<a href="https://www.bluesquaremfg.com/" target="_blank"><img src="img/main-logo.png"/></a>
+						<a href="https://www.bluesquaremfg.com/" target="_blank"><img src="img/presidential-pools-logo-gray.png"/></a>
 						<!--<div class="right"><a href="#"><img src="img/facebook-icon.png"/></a><a href="#"><img src="img/twitter-icon.png"/></a><a href="#"><img src="img/linkedin-icon.png"/></a><a href="#"><img src="img/facebook-icon.png"/></a></div>-->
 					</div>
 				</div>
@@ -173,11 +186,20 @@
 				}
 			}
 			$( document ).ready(function() {
-				$('#header').load('header-2.html');
+				var test = getRandomInt(0,1) == 0 ? 'a' : 'b'; //a or b
+				if (test == 'a'){
+					$('#header').load('header-1.html');
+					$('#cta').attr('href','#test-a'); //change to new link
+				}
+				else if(test == 'b'){
+					$('#header').load('header-2.html');
+					$('#cta').attr('href','#test-b'); //change to new link
+				}
 				$('.owl-carousel.parts').owlCarousel({ loop:true, nav:true, navText:["",""], items:1, margin:0, autoplay:true, autoplayTimeout: 2000, pagination: true  });
 				$('.owl-carousel.zero').owlCarousel({ loop:true, nav:true, navText:["",""], items:1, margin:0, autoplay:true, autoplayTimeout: 2000, animateOut: 'fadeOut', touchDrag: false, mouseDrag: false  });
 			});
 
+			function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
 		</script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

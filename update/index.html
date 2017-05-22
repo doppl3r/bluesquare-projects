@@ -17,7 +17,7 @@
 			<div class="wrapper-outer">
 				<div class="wrapper-inner">
 					<div class="left">
-						<img src="img/update-logo.png"/>
+						<a href="index.html"><img src="img/update-logo.png"/></a>
 					</div>
 					<div class="right">
 						<img class="button fade-effect" src="img/nav-button.png"/>
@@ -141,14 +141,58 @@
 			</div>
 
 			<div class="wrapper-outer">
-				<div class="section background-image" id="section2" data-menu-offset="-64" style="background-image: url('img/bg1-0.jpg');">
+				<div class="section background-image modal-playpen" id="section2" data-menu-offset="-64" style="background-image: url('img/bg1-0.jpg');">
 					<div class="wrapper-inner">
 						<img class="center-image" src="img/save-50-percent-text.png"/>
-						<a class="green-button" id="cta">
+						<a class="green-button" id="cta" data-toggle="modal" data-target="#formModal">
 							<div class="large-text">order now</div>
 							<div class="small-text">limited time offer</div>
 						</a>
 						<h1 style="font-family:'roboto-condensedbold'; font-size: 45px; text-align: center; color: #fff;">or Call 1.800.277.4150</h1>
+						<!-- Form Modal -->
+						<div class="modal fade" id="formModal" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-body">
+										<form enctype="multipart/form-data" action="php/mail.php" method="POST" >
+											<div class="row">
+												<input class="form-control" type="text" placeholder="Name*" name="name" required/>
+											</div>
+											<div class="row">
+												<div class="left">
+													<input class="form-control" type="email" placeholder="Email Address*" name="email" required/>
+												</div>
+												<div class="right">
+													<input class="form-control" type="text" placeholder="Phone*" name="usrtel" required/>
+												</div>
+											</div>
+											<div class="row">
+												<input id="pageview" type="hidden" name="pageview" value="a">
+												<button class="button effect-swing" id="submitbutton" type="submit" value="a">Submit</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Thank You Modal -->
+			<div class="modal fade" id="tyModal" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h3 class="modal-title" style="text-align: center;">Thank you!</h3>
+						</div>
+						<div class="modal-body">
+							<p style="max-width: 360px; margin: auto;">Your information was successfully sent to our team. For more information about our update program, please call <strong>1.800.277.4150</strong></p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -184,16 +228,22 @@
 				if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 					s.destroy();
 				}
+				//show thank you message
+				if(window.location.href.indexOf("?p=success") > -1) {
+					$('#tyModal').modal('toggle');
+				}
 			}
 			$( document ).ready(function() {
 				var test = getRandomInt(0,1) == 0 ? 'a' : 'b'; //a or b
 				if (test == 'a'){
 					$('#header').load('header-1.html');
 					$('#cta').attr('href','#test-a'); //change to new link
+					$('#pageview').attr('value','a'); //change to new link
 				}
 				else if(test == 'b'){
 					$('#header').load('header-2.html');
 					$('#cta').attr('href','#test-b'); //change to new link
+					$('#pageview').attr('value','b'); //change to new link
 				}
 				$('.owl-carousel.parts').owlCarousel({ loop:true, nav:true, navText:["",""], items:1, margin:0, autoplay:true, autoplayTimeout: 2000, pagination: true  });
 				$('.owl-carousel.zero').owlCarousel({ loop:true, nav:true, navText:["",""], items:1, margin:0, autoplay:true, autoplayTimeout: 2000, animateOut: 'fadeOut', touchDrag: false, mouseDrag: false  });

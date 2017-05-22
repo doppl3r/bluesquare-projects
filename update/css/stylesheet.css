@@ -134,6 +134,32 @@ body { background-color: transparent; font-family: 'roboto-condensedlight'; }
 .breaker { border-bottom: 1px solid #d9d9d9; }
 .center { text-align: center; }
 
+.modal-playpen { padding-top: 5%; text-align: center; background-color: #f5f5f5; }
+.modal-playpen .wrapper-inner {  max-width: 640px; }
+.modal-playpen .row { margin: 0 !important; }
+.modal-playpen input {
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+    border-radius: 0;
+    box-shadow: none;
+    height: 48px;
+    line-height: 48px;
+    margin-bottom: 12px;
+}
+.modal-playpen button {
+    width: 100%;
+    background-color: #0d9a69;
+    border: none;
+    color: #ffffff;
+    padding: 24px;
+    text-transform: uppercase;
+}
+
+.modal { text-align: center; overflow: hidden; }
+.modal:before { display: inline-block; vertical-align: middle; content: " "; height: 100%; }
+.modal-dialog { display: inline-block; text-align: left; vertical-align: middle; }
+.modal-content { border-radius: 0; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
+
 @media(max-width:1200px){
     .nav .right a.large { font-size: 16px; }
 }

@@ -14,7 +14,7 @@ $mail = new PHPMailer();
 //Set who the message is to be sent from
 $mail->setFrom($_REQUEST['email'], $_REQUEST['name']);
 //Set who the message is to be sent to
-$mail->addAddress('update@bluesquaremfg.com');
+$mail->addAddress('Update@bluesquaremfg.com');
 $mail->addAddress('jacob@yanocreative.com');
 //Set the subject line
 $mail->Subject = 'BlueSquare Update Program Submission';

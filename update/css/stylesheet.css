@@ -71,6 +71,10 @@ body { background-color: transparent; font-family: 'roboto-condensedlight'; }
 .section .tg .tg-s6z2.no-border {  border: 2px solid #FFF;}
 .section .tg .tg-1c9a{background-color:#05518d;color:#ffffff;text-align:center;  border: 2px solid #e5e5e5;}
 
+.section form { padding: 24px 0 0; }
+.section form input { margin-bottom: 24px; }
+.section form button.green { background-color: #b7da2f; }
+
 .background-image {
     background: url('') no-repeat;
     background-position-x: 50%;

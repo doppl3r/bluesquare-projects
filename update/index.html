@@ -144,13 +144,30 @@
 				<div class="section background-image modal-playpen" id="section2" data-menu-offset="-64" style="background-image: url('img/bg1-0.jpg');">
 					<div class="wrapper-inner">
 						<img class="center-image" src="img/save-50-percent-text.png"/>
-						<a class="green-button" id="cta" data-toggle="modal" data-target="#formModal">
+						<!--<a class="green-button" id="cta" data-toggle="modal" data-target="#formModal">
 							<div class="large-text">order now</div>
 							<div class="small-text">limited time offer</div>
-						</a>
+						</a>-->
+						<form enctype="multipart/form-data" action="php/mail.php" method="POST" >
+							<div class="row">
+								<input class="form-control" type="text" placeholder="Name*" name="name" required/>
+							</div>
+							<div class="row">
+								<div class="left">
+									<input class="form-control" type="email" placeholder="Email Address*" name="email" required/>
+								</div>
+								<div class="right">
+									<input class="form-control" type="text" placeholder="Phone*" name="usrtel" required/>
+								</div>
+							</div>
+							<div class="row">
+								<input id="pageview" type="hidden" name="pageview" value="a">
+								<button class="button effect-swing green" id="submitbutton" type="submit" value="a">Submit</button>
+							</div>
+						</form>
 						<h1 style="font-family:'roboto-condensedbold'; font-size: 45px; text-align: center; color: #fff;">or Call 1.800.277.4150</h1>
 						<!-- Form Modal -->
-						<div class="modal fade" id="formModal" role="dialog">
+						<!--<div class="modal fade" id="formModal" role="dialog">
 							<div class="modal-dialog">
 								<div class="modal-content">
 									<div class="modal-body">
@@ -174,7 +191,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div>-->
 					</div>
 				</div>
 			</div>

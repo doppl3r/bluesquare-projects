@@ -73,7 +73,7 @@ body { background-color: transparent; font-family: 'roboto-condensedlight'; }
 
 .section form { padding: 24px 0 0; }
 .section form input { margin-bottom: 24px; }
-.section form button.green { background-color: #b7da2f; }
+.section form button.green { background-color: #b7da2f; color: #163e78; font-family: 'roboto-condensedregular'; font-size: 26px; text-align: center; }
 
 .background-image {
     background: url('') no-repeat;

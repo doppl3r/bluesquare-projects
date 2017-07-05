@@ -256,11 +256,13 @@
 					$('#header').load('header-1.html');
 					$('#cta').attr('href','#test-a'); //change to new link
 					$('#pageview').attr('value','a'); //change to new link
+					$('#submitbutton').attr("onclick","ga('send', 'event', 'test-a', 'click')");
 				}
 				else if(test == 'b'){
 					$('#header').load('header-2.html');
 					$('#cta').attr('href','#test-b'); //change to new link
 					$('#pageview').attr('value','b'); //change to new link
+					$('#submitbutton').attr("onclick","ga('send', 'event', 'test-b', 'click')");
 				}
 				$('.owl-carousel.parts').owlCarousel({ loop:true, nav:true, navText:["",""], items:1, margin:0, autoplay:true, autoplayTimeout: 2000, pagination: true  });
 				$('.owl-carousel.zero').owlCarousel({ loop:true, nav:true, navText:["",""], items:1, margin:0, autoplay:true, autoplayTimeout: 2000, animateOut: 'fadeOut', touchDrag: false, mouseDrag: false  });

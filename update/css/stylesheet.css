@@ -70,9 +70,11 @@ body { background-color: transparent; font-family: 'roboto-condensedlight'; }
 .section .tg  { border-collapse:collapse; border-spacing:0; width: 100%; margin-top: 48px; border: 2px solid #efefef; }
 .section .tg td{ font-size:26px; padding:24px 5px; border: 2px solid #FFF; overflow:hidden; word-break:normal; }
 .section .tg th{ font-size:26px; font-weight:normal; padding:24px 5px; border: 2px solid #FFF; overflow:hidden; word-break:normal;}
-.section .tg .tg-s6z2{text-align:center; color:#666; border: 2px solid #e5e5e5;}
+.section .tg .tg-s6z2{ text-align:center; font-weight: bold; color:#05518d; border: 2px solid #e5e5e5;}
 .section .tg .tg-s6z2.no-border {  border: 2px solid #FFF;}
 .section .tg .tg-1c9a{background-color:#05518d;color:#ffffff;text-align:center;  border: 2px solid #e5e5e5;}
+.section .tg .sub { font-size: 12px; vertical-align: top; padding-left: 2px; }
+.section .tg .extra { font-size: 12px; }
 
 .section form { padding: 24px 0 0; }
 .section form input { margin-bottom: 24px; }

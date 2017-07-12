@@ -1,0 +1,910 @@
+//colors
+$white: #fff;
+$color_celeste_approx: #cccccc;
+$black_15: rgba(0,0,0,0.15);
+$color_cape_cod_approx: #3f3f3f;
+$color_astronaut_approx: #183d73;
+$color_bahia_approx: #a5ca16;
+$color_green_haze_approx: #0d9a69;
+$color_curious_blue_approx: #269cdb;
+$black: #000;
+$color_storm_dust_approx: #666;
+$color_tapa_approx: #777;
+$gallery: #efefef;
+$color_venice_blue_approx: #05518d;
+$mercury: #e5e5e5;
+$color_key_lime_pie_approx: #b7da2f;
+$color_wild_sand_approx: #f5f5f5;
+$color_quill_gray_approx: #d5d5d5;
+$color_alto_approx: #d9d9d9;
+
+//fonts
+$font_0: avenir-next;
+$font_1: avenir-next-reg;
+$font_2: GothamHTF-BookCondensed;
+$font_3: GothamHTF-Medium;
+$font_4: gotham-ultra;
+$font_5: roboto-condensedregular;
+$font_6: roboto-condensedbold;
+$font_7: roboto-condensedlight;
+
+//urls
+$url_0: url();
+$url_1: url(../fonts/avenirnextltpro-demicn.eot);
+$url_2: url(../fonts/avenirnextltpro-demicn.eot?#iefix);
+$url_3: url(../fonts/avenirnextltpro-demicn.woff);
+$url_4: url(../fonts/avenirnextltpro-demicn.ttf);
+$url_5: url(../fonts/avenirnextltpro-demicn.svg#ubunturegular);
+$url_6: url(../fonts/AvenirNext-Regular.eot);
+$url_7: url(../fonts/AvenirNext-Regular.eot?#iefix);
+$url_8: url(../fonts/AvenirNext-Regular.woff);
+$url_9: url(../fonts/AvenirNext-Regular.ttf);
+$url_10: url(../fonts/AvenirNext-Regular.svg#ubunturegular);
+$url_11: url(../fonts/GothamHTF-BookCondensed.eot);
+$url_12: url(../fonts/GothamHTF-BookCondensed.eot?#iefix);
+$url_13: url(../fonts/GothamHTF-BookCondensed.woff);
+$url_14: url(../fonts/GothamHTF-BookCondensed.ttf);
+$url_15: url(../fonts/GothamHTF-BookCondensed.svg#ubunturegular);
+$url_16: url(../fonts/GothamHTF-Medium.eot);
+$url_17: url(../fonts/GothamHTF-Medium.eot?#iefix);
+$url_18: url(../fonts/GothamHTF-Medium.woff);
+$url_19: url(../fonts/GothamHTF-Medium.ttf);
+$url_20: url(../fonts/GothamHTF-Medium.svg#ubunturegular);
+$url_21: url(../fonts/GothamHTF-Ultra.eot);
+$url_22: url(../fonts/GothamHTF-Ultra.eot?#iefix);
+$url_23: url(../fonts/GothamHTF-Ultra.woff);
+$url_24: url(../fonts/GothamHTF-Ultra.ttf);
+$url_25: url(../fonts/GothamHTF-Ultra.svg#ubunturegular);
+$url_26: url(../fonts/robotocondensed-regular-webfont.eot);
+$url_27: url(../fonts/robotocondensed-regular-webfont.eot?#iefix);
+$url_28: url(../fonts/robotocondensed-regular-webfont.woff2);
+$url_29: url(../fonts/robotocondensed-regular-webfont.woff);
+$url_30: url(../fonts/robotocondensed-regular-webfont.ttf);
+$url_31: url(../fonts/robotocondensed-regular-webfont.svg);
+$url_32: url(../fonts/robotocondensed-bold-webfont.eot);
+$url_33: url(../fonts/robotocondensed-bold-webfont.eot?#iefix);
+$url_34: url(../fonts/robotocondensed-bold-webfont.woff2);
+$url_35: url(../fonts/robotocondensed-bold-webfont.woff);
+$url_36: url(../fonts/robotocondensed-bold-webfont.ttf);
+$url_37: url(../fonts/robotocondensed-bold-webfont.svg);
+$url_38: url(../fonts/robotocondensed-light-webfont.eot);
+$url_39: url(../fonts/robotocondensed-light-webfont.eot?#iefix);
+$url_40: url(../fonts/robotocondensed-light-webfont.woff2);
+$url_41: url(../fonts/robotocondensed-light-webfont.woff);
+$url_42: url(../fonts/robotocondensed-light-webfont.ttf);
+$url_43: url(../fonts/robotocondensed-light-webfont.svg);
+
+//@extend-elements
+//original selectors
+//.section p, .section ul
+%extend_1 {
+	font-family: $font_7;
+	color: $color_tapa_approx;
+	font-size: 17px;
+	margin: 24px 0;
+}
+
+//original selectors
+//#section0 .owl-prev:after, #section0 .owl-next:after
+%extend_2 {
+	visibility: visible;
+	font-size: 32px;
+	color: $color_celeste_approx;
+	pointer-events: all;
+	display: inline-block;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: scale(1,3);
+	font-family: initial;
+	width: 100%;
+	height: 100%;
+}
+
+
+html {
+	background-color: $color_celeste_approx;
+}
+body {
+	background-color: transparent;
+	font-family: $font_7;
+}
+.nav {
+	display: block;
+	height: 124px;
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	.wrapper-outer {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 5px 5px $black_15;
+		overflow: initial;
+		height: 100%;
+		background-color: $white;
+	}
+	.left {
+		float: left;
+		height: inherit;
+		img {
+			height: 100%;
+			max-height: 90px;
+			margin: 17px 0;
+			width: auto;
+		}
+	}
+	.right {
+		float: right;
+		height: inherit;
+		position: relative;
+		a {
+			display: inline-block;
+			text-transform: uppercase;
+			line-height: 124px;
+			font-size: 17px;
+			color: $color_cape_cod_approx;
+			padding: 0 0 0 24px;
+			text-decoration: none;
+			&.large {
+				font-family: $font_5;
+				text-transform: initial;
+				font-style: italic;
+				font-size: 30px;
+				color: $color_astronaut_approx;
+			}
+			&.banner {
+				background-color: $color_bahia_approx;
+				display: inline-block;
+				margin-left: 24px;
+				padding: 20px 0;
+				position: relative;
+				line-height: initial;
+				text-align: center;
+				vertical-align: top;
+				width: 180px;
+				.text-1 {
+					color: $white;
+					font-family: $font_5;
+					font-size: 22px;
+					text-transform: capitalize;
+					font-style: italic;
+					letter-spacing: -1px;
+				}
+				.text-2 {
+					color: $white;
+					font-family: $font_4;
+					font-size: 55px;
+					line-height: 40px;
+				}
+				.text-3 {
+					color: $color_astronaut_approx;
+					font-family: $font_5;
+					font-size: 23px;
+					font-weight: bold;
+					line-height: normal;
+				}
+				.text-4 {
+					color: $white;
+					font-family: $font_4;
+					font-size: 90px;
+					line-height: 70px;
+					position: relative;
+					margin-right: 12px;
+					&:before {
+						content: '%';
+						font-family: $font_6;
+						font-size: 40px;
+						line-height: 36px;
+						top: 0;
+						right: 0;
+						position: absolute;
+					}
+					&:after {
+						content: 'off';
+						font-family: $font_6;
+						font-size: 19px;
+						line-height: 16px;
+						bottom: 6px;
+						right: -4px;
+						position: absolute;
+					}
+				}
+				&:before {
+					content: '';
+					left: 0;
+					bottom: -20px;
+					position: absolute;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 20px 90px 0 0;
+					border-color: $color_bahia_approx transparent transparent transparent;
+				}
+				&:after {
+					content: '';
+					right: 0;
+					bottom: -20px;
+					position: absolute;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 20px 0 0 90px;
+					border-color: $color_bahia_approx transparent transparent transparent;
+				}
+			}
+			.color {
+				background-color: $color_green_haze_approx;
+				border: 1px solid $color_green_haze_approx;
+				color: $white;
+				padding: 12px;
+				margin: -12px 0;
+			}
+			&:hover {
+				color: $color_curious_blue_approx;
+				.color {
+					background-color: $white;
+					color: $color_green_haze_approx;
+				}
+			}
+		}
+		> .button {
+			display: none;
+		}
+	}
+	.wrapper-inner {
+		height: 100%;
+	}
+}
+.wrapper-outer {
+	max-width: 1400px;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+.wrapper-inner {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 12px;
+}
+.header {
+	width: 100%;
+	height: 900px;
+	color: $white;
+	position: relative;
+	overflow: hidden;
+	> img {
+		width: 100%;
+		height: auto;
+		min-height: 640px;
+		min-width: 1280px;
+		right: 0;
+		position: absolute;
+		bottom: 0;
+	}
+	.article {
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.head-line {
+		margin: auto;
+		text-align: center;
+		padding: 24px 16px 0;
+		img {
+			max-width: 100%;
+		}
+		h1 {
+			margin: 12px 0;
+			padding: 0;
+			font-family: $font_2;
+			font-size: 38px;
+			line-height: 32px;
+		}
+		p {
+			margin: 12px 0;
+			padding: 0;
+			font-family: $font_7;
+			font-size: 15px;
+			line-height: 12px;
+			text-align: right;
+		}
+	}
+	.footer {
+		position: absolute;
+		bottom: 0;
+		right: 120px;
+		span {
+			color: $white;
+			display: block;
+			padding: 12px 0;
+			//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			text-shadow: 0 0 5px $black;
+		}
+		.logo {
+		}
+	}
+	.learn-more {
+		bottom: 12px;
+		color: $white;
+		font-family: $font_2;
+		font-size: 17px;
+		left: 0;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		&:after {
+			content: '\2193';
+			display: block;
+			font-size: 16px;
+			line-height: 16px;
+		}
+	}
+}
+.owl-carousel {
+	height: inherit;
+	.owl-stage-outer {
+		height: inherit;
+	}
+	.owl-stage {
+		height: inherit;
+	}
+	.item {
+		width: 100%;
+		height: inherit;
+		background: $url_0 no-repeat center center;
+		background-size: cover;
+	}
+	.owl-controls {
+		text-align: center;
+		margin: 12px 0;
+	}
+	.owl-dot {
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		background-color: $color_celeste_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		margin: 0 5px;
+		&.active {
+			background-color: $color_astronaut_approx;
+		}
+	}
+	&.owl-text-select-on .owl-item {
+		height: inherit;
+	}
+}
+.section {
+	background-color: $white;
+	padding: 80px 0;
+	width: 100%;
+	h1 {
+		font-family: $font_6;
+		font-size: 36px;
+		margin-bottom: 24px;
+		color: $color_storm_dust_approx;
+	}
+	h3 {
+		font-family: $font_6;
+		font-size: 30px;
+		margin-bottom: 24px;
+		color: $color_storm_dust_approx;
+	}
+	p {
+		@extend %extend_1;
+	}
+	ul {
+		@extend %extend_1;
+		padding-left: 0;
+		margin-left: 20px;
+		margin: 0 0 0 20px;
+	}
+	.left {
+		width: 50%;
+		display: inline-block;
+		padding-right: 12px;
+		margin-right: -4px;
+		&.relative {
+			position: relative;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: auto;
+				z-index: 0;
+			}
+		}
+	}
+	.right {
+		width: 50%;
+		display: inline-block;
+		padding-left: 12px;
+		vertical-align: top;
+	}
+	video {
+		width: 100%;
+		height: auto;
+	}
+	.tm {
+		font-size: .45em;
+		vertical-align: top;
+		text-transform: uppercase;
+		margin-top: -10px;
+	}
+	.tg {
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+		margin-top: 48px;
+		border: 2px solid $gallery;
+		td {
+			font-size: 26px;
+			padding: 24px 5px;
+			border: 2px solid $white;
+			overflow: hidden;
+			//Instead of the line below you could use @include word-break($value)
+			word-break: normal;
+		}
+		th {
+			font-size: 26px;
+			font-weight: normal;
+			padding: 24px 5px;
+			border: 2px solid $white;
+			overflow: hidden;
+			//Instead of the line below you could use @include word-break($value)
+			word-break: normal;
+		}
+		.tg-s6z2 {
+			text-align: center;
+			font-weight: bold;
+			color: $color_venice_blue_approx;
+			border: 2px solid $mercury;
+			&.no-border {
+				border: 2px solid $white;
+			}
+		}
+		.tg-1c9a {
+			background-color: $color_venice_blue_approx;
+			color: $white;
+			text-align: center;
+			border: 2px solid $mercury;
+		}
+		.sub {
+			font-size: 12px;
+			vertical-align: top;
+			padding-left: 2px;
+		}
+		.extra {
+			font-size: 12px;
+		}
+	}
+	form {
+		padding: 24px 0 0;
+		input {
+			margin-bottom: 24px;
+		}
+		button.green {
+			background-color: $color_key_lime_pie_approx;
+			color: $color_astronaut_approx;
+			font-family: $font_5;
+			font-size: 26px;
+			text-align: center;
+		}
+	}
+	&.animate-images {
+		padding: 48px;
+	}
+	.animation {
+		position: relative;
+		max-width: 800px;
+		margin-top: -16px;
+		min-height: 420px;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: auto;
+		}
+	}
+	img {
+		max-width: 100%;
+	}
+	.wrapper-inner.smaller {
+		max-width: 1000px;
+	}
+}
+.background-image {
+	background: $url_0 no-repeat;
+	background-position-x: 50%;
+	background-position-y: 50%;
+	background-size: cover;
+}
+.center-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.guy {
+	position: absolute;
+	bottom: 0;
+	right: 24px;
+}
+.green-button {
+	background-color: $color_key_lime_pie_approx;
+	display: block;
+	font-family: $font_3;
+	max-width: 750px;
+	margin: 16px auto;
+	padding: 8px 0;
+	text-align: center;
+	text-transform: uppercase;
+	color: $color_astronaut_approx !important;
+	text-decoration: none !important;
+	cursor: pointer;
+	.large-text {
+		font-size: 40px;
+		line-height: 36px;
+	}
+	.small-text {
+		font-size: 14px;
+		line-height: 16px;
+	}
+}
+#section0 {
+	background-color: $color_wild_sand_approx;
+	padding-top: 48px;
+	padding-bottom: 0;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 -80px 80px -80px $black_15;
+	.wrapper-inner {
+		margin-bottom: -5px;
+	}
+	img {
+		width: auto;
+		margin: 0 auto -64px auto;
+	}
+	.owl-carousel {
+		.owl-controls {
+			position: absolute;
+			top: 40%;
+			left: 0;
+			right: 0;
+			pointer-events: none;
+		}
+		.owl-pagination {
+			display: none;
+		}
+	}
+	.owl-prev {
+		visibility: hidden;
+		position: absolute !important;
+		left: 5%;
+		&:after {
+			@extend %extend_2;
+			content: ' >';
+		}
+	}
+	.owl-next {
+		right: 5%;
+		&:after {
+			@extend %extend_2;
+			content: ' >';
+		}
+	}
+	ul {
+		list-style: none;
+		margin: 48px 0 0 56px;
+		li {
+			padding-bottom: 32px;
+			position: relative;
+		}
+	}
+	.step {
+		position: absolute;
+		left: -48px;
+		top: -4px;
+		font-family: $font_4;
+		color: $white;
+		display: inline-block;
+		font-size: 18px;
+		height: 32px;
+		line-height: 32px;
+		width: 32px;
+		background-color: $color_venice_blue_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		text-align: center;
+	}
+}
+.owl-next {
+	visibility: hidden;
+	position: absolute !important;
+}
+.pad-left-110 {
+	padding-left: 110px;
+}
+.breaker {
+	border-bottom: 1px solid $color_alto_approx;
+}
+.center {
+	text-align: center;
+}
+.modal-playpen {
+	padding-top: 5%;
+	text-align: center;
+	background-color: $color_wild_sand_approx;
+	.wrapper-inner {
+		max-width: 640px;
+	}
+	.row {
+		margin: 0 !important;
+	}
+	input {
+		background-color: $white;
+		border: 2px solid $mercury;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+		height: 48px;
+		line-height: 48px;
+		margin-bottom: 12px;
+	}
+	button {
+		width: 100%;
+		background-color: $color_green_haze_approx;
+		border: none;
+		color: $white;
+		padding: 24px;
+		text-transform: uppercase;
+	}
+}
+.modal {
+	text-align: center;
+	overflow: hidden;
+	&:before {
+		display: inline-block;
+		vertical-align: middle;
+		content: " ";
+		height: 100%;
+	}
+}
+.modal-dialog {
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+}
+.modal-content {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	border: none;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 5px 15px $black_15;
+}
+@media(max-width:1200px) {
+	.nav .right a.large {
+		font-size: 16px;
+	}
+}
+@media(max-width:960px) {
+	.nav {
+		height: 80px;
+		.left {
+			height: 64px;
+			margin-top: 14px;
+			img {
+				margin-top: 2px;
+				max-height: 80%;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+		.right a {
+			font-size: 14px;
+			line-height: 80px;
+		}
+	}
+	.guy {
+		max-width: 50% !important;
+		z-index: 0;
+	}
+	.header .head-line {
+		h1 {
+			font-size: 24px;
+		}
+		p {
+			text-align: center;
+		}
+	}
+	.section .tg {
+		td {
+			font-size: 18px;
+		}
+		th {
+			font-size: 18px;
+		}
+	}
+}
+@media(max-width:800px) {
+	.nav {
+		.right {
+			background-color: $white;
+			height: auto;
+			> a {
+				display: none;
+				text-align: center;
+				padding: 0 12px;
+				width: 100%;
+				&.banner {
+					margin: 0;
+				}
+			}
+		}
+		&:hover .right > img {
+			margin-top: -40px;
+		}
+	}
+	.pad-left-110 {
+		padding-left: 0;
+	}
+	.header .footer {
+		right: 12px;
+		.logo {
+			max-width: 50%;
+			height: auto;
+		}
+	}
+	.section.animate-images .right {
+		width: 100%;
+	}
+}
+@media(max-width:640px) {
+	.section {
+		padding: 32px 0;
+		.left {
+			width: 100%;
+			display: block;
+			padding: 0;
+			img {
+				margin-top: 12px;
+				max-height: 50%;
+			}
+		}
+		.right {
+			width: 100%;
+			display: block;
+			padding: 0;
+		}
+		.tg {
+			td {
+				font-size: 14px;
+			}
+			th {
+				font-size: 14px;
+			}
+		}
+	}
+	.guy {
+		display: none;
+	}
+	#section3 {
+		.left {
+			width: 100%;
+		}
+		.right {
+			width: 100%;
+			text-align: center;
+		}
+	}
+	.nav .right {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(0.7);
+		top: -30%;
+		position: absolute;
+		right: 0;
+	}
+	#section0 img {
+		width: auto;
+		margin: 0 auto;
+	}
+	#section2 h1 {
+		font-size: 48px;
+		line-height: 42px;
+	}
+}
+@media(max-width:480px) {
+	.nav {
+		.left {
+			width: 100%;
+			text-align: center;
+		}
+		.right > a.banner {
+			display: none;
+		}
+	}
+}
+@font-face {
+	font-family: $font_0;
+	src: $url_1;
+	src: $url_2 format('embedded-opentype'), $url_3 format('woff'), $url_4 format('truetype'), $url_5 format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_1;
+	src: $url_6;
+	src: $url_7 format('embedded-opentype'), $url_8 format('woff'), $url_9 format('truetype'), $url_10 format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_2;
+	src: $url_11;
+	src: $url_12 format('embedded-opentype'), $url_13 format('woff'), $url_14 format('truetype'), $url_15 format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_3;
+	src: $url_16;
+	src: $url_17 format('embedded-opentype'), $url_18 format('woff'), $url_19 format('truetype'), $url_20 format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_4;
+	src: $url_21;
+	src: $url_22 format('embedded-opentype'), $url_23 format('woff'), $url_24 format('truetype'), $url_25 format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_5;
+	src: $url_26;
+	src: $url_27 format('embedded-opentype'), $url_28 format('woff2'), $url_29 format('woff'), $url_30 format('truetype'), $url_31 format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_6;
+	src: $url_32;
+	src: $url_33 format('embedded-opentype'), $url_34 format('woff2'), $url_35 format('woff'), $url_36 format('truetype'), $url_37 format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font_7;
+	src: $url_38;
+	src: $url_39 format('embedded-opentype'), $url_40 format('woff2'), $url_41 format('woff'), $url_42 format('truetype'), $url_43 format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.footer.section {
+	background-color: $color_quill_gray_approx;
+	padding: 0 0 128px 0;
+	text-align: center;
+	a {
+		display: inline-block;
+		font-size: 16px;
+		color: $color_tapa_approx;
+		padding: 6px 12px;
+		margin: 24px 0;
+		border-right: 2px solid $color_celeste_approx;
+		&:last-of-type {
+			border: none;
+		}
+	}
+	img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+}

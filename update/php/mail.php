@@ -14,8 +14,10 @@ $mail = new PHPMailer();
 //Set who the message is to be sent from
 $mail->setFrom($_REQUEST['email'], $_REQUEST['name']);
 //Set who the message is to be sent to
-$mail->addAddress('Update@bluesquaremfg.com');
-$mail->addAddress('jacob@yanocreative.com');
+//$mail->addAddress('Update@bluesquaremfg.com');
+$mail->addAddress('bluesquareupdate@gmail.com');
+//$mail->addAddress('brittsutton@bluesquaremfg.com');
+//$mail->addAddress('jacob@yanocreative.com');
 //Set the subject line
 $mail->Subject = 'BlueSquare Update Program Submission';
 //Read an HTML message body from an external file, convert referenced images to embedded,

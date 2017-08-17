@@ -34,7 +34,7 @@ $mail->msgHTML($message);
 if (!$mail->send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
 } else {
-    echo '<script>window.location = "../index.html?p=success#section2";</script>';
+    echo '<script>window.location = "../thankyou.html";</script>';
 }
 ?>
 </body>

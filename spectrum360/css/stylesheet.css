@@ -22,6 +22,9 @@ body { background-color: transparent; font-family: 'avenir-next'; }
 .header > img { width: 100%; height: auto; min-height: 640px; min-width: 1280px; right: 0px; position: absolute; bottom: 0px; }
 .header .article { position: absolute; z-index: 1; width: 100%; height: 100%; top:0; }
 .header .head-line { margin-top: 210px; }
+.header .head-line img { max-width: 100%; }
+.header .head-line a { display: inline-block; font-size: 21px; text-transform: uppercase; background-color: #0d9a69; border: 1px solid #0d9a69; color: #fff; margin-left: 80px; padding: 24px 48px; text-decoration: none; }
+.header .head-line a:hover { background-color: #ffffff; color: #0d9a69; }
 .header .head-line h1 { text-transform: uppercase; margin: 0px; padding: 0px; font-family: 'gotham-ultra'; font-size: 80px; line-height: 64px; text-shadow: 0px 0px 20px rgba(0,0,0,0.75); }
 .header .head-line h2 { text-transform: uppercase; margin: 0px; padding: 0px; font-family: 'avenir-next'; font-size: 30px; line-height: 36px; text-shadow: 0px 0px 10px rgba(0,0,0,0.75); }
 .header .footer { position: absolute; bottom: 0px; right: 120px; }
@@ -55,6 +58,9 @@ body { background-color: transparent; font-family: 'avenir-next'; }
 .section .tg .tg-s6z2{text-align:center; color:#666; border: 2px solid #e5e5e5;}
 .section .tg .tg-s6z2.no-border {  border: 2px solid #FFF;}
 .section .tg .tg-1c9a{background-color:#05518d;color:#ffffff;text-align:center;  border: 2px solid #e5e5e5;}
+
+.section.video { text-align: center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-attachment: fixed; }
+.section.video img { max-width: 100%; }
 
 #section0 { background-color: #f5f5f5; padding-top: 48px; padding-bottom: 0; box-shadow: inset 0 -80px 80px -80px rgba(0,0,0,0.15); }
 #section0 .wrapper-inner { margin-bottom: -5px; }
@@ -157,6 +163,9 @@ body { background-color: transparent; font-family: 'avenir-next'; }
     .nav .left { height: 48px; margin: 8px 0px; }
     .section.animate-images .right { width: 100%; }
     .pad-left-110 { padding-left: 0px; }
+
+    .header .head-line { text-align: center; }
+    .header .head-line a { margin: 0; }
 }
 @media(max-width:640px){
     .nav .right { background-color: #FFF; height: auto; }

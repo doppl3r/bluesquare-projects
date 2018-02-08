@@ -166,6 +166,7 @@ body { background-color: transparent; font-family: 'avenir-next'; }
 
     .header .head-line { text-align: center; }
     .header .head-line a { margin: 0; }
+    .header .head-line div[style*="margin-top"]{ margin-top: 0 !important; }
 }
 @media(max-width:640px){
     .nav .right { background-color: #FFF; height: auto; }

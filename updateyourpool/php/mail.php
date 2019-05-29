@@ -27,7 +27,6 @@ $message =  '<div style="padding: 64px; background-color: #f3f3f3; max-width: 48
             '<p style="color: #666; font-size: 16px;"><strong>Name:</strong> '.$_REQUEST['name'].'</p>'.
             '<p style="color: #666; font-size: 16px;"><strong>Email Address:</strong> '.$_REQUEST['email'].'</p>'.
             '<p style="color: #666; font-size: 16px;"><strong>Phone:</strong> '.$_REQUEST['usrtel'].'</p>'.
-            '<p style="color: #666; font-size: 16px;"><strong>Pageview:</strong> '.$_REQUEST['pageview'].'</p>'.
             '</div>';
 $mail->msgHTML($message);
 //send the message, check for errors
